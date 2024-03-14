@@ -32,8 +32,15 @@
                 <td class="border px-4 py-2">{{ $superhero->real_name }}</td>
                 <td class="border px-4 py-2">{{ $superhero->superhero_name }}</td>
                 <td class="border px-4 py-2">
-                    <a href="{{ route('superheroes.show', $superhero->id) }}"  class="text-cyan-500 hover:text-cyan-700"><x-heroicon-o-eye class="w-6 h-6 mr-2 text-" />Ver</a>
-                    <a href="{{ route('superheroes.edit', $superhero->id) }}" class="text-yellow-500 hover:text-yellow-700 ml-2">Editar</a>
+                    <a href="{{ route('superheroes.show', $superhero->id) }}"  class="text-cyan-500 hover:text-cyan-700 inline-flex items-center"><x-heroicon-o-eye class="w-6 h-6 mr-2"/></a>
+                    <a href="{{ route('superheroes.edit', $superhero->id) }}" class="text-yellow-500 hover:text-yellow-700 ml-2 inline-flex items-center"><x-heroicon-o-pencil-square class="w-6 h-6 mr-2"/></a>
+                    <form action="{{ route('superheroes.destroy', $superhero->id) }}" method="POST" class="inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="text-red-500 hover:text-red-700 ml-2 inline-flex items-center">
+                            <x-heroicon-o-trash class="w-6 h-6 mr-2"/>
+                        </button>
+                    </form>
                 </td>
             </tr>
             @endforeach

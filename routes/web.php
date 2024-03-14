@@ -27,3 +27,5 @@ Route::get('/edit/{id}', [SuperheroeController::class, 'edit'])->name('superhero
 // Ruta para actualizar un superhéroe específico
 Route::put('/update/{id}', [SuperheroeController::class, 'update'])->name('superheroes.update');
 
+Route::delete('/superheroes/{id}', [SuperheroeController::class, 'destroy'])->name('superheroes.destroy');
+
