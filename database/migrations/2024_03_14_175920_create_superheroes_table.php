@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('superheroes', function (Blueprint $table) {
             $table->id();
+            $table->string('real_name');
+            $table->string('superhero_name');
+            $table->string('photo_url');
+            $table->text('additional_info')->nullable();
             $table->timestamps();
         });
     }
