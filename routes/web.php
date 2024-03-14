@@ -21,6 +21,7 @@ Route::get('/index', [SuperheroeController::class, 'index'])->name('superheroes.
 //Ruta para mostrar los detalles de un superheroes específico
 Route::get('/show/{id}', [SuperheroeController::class, 'show'])->name('superheroes.show');
 
-
+// Ruta para mostrar el formulario de edición de un superhéroe específico
+Route::get('/edit/{id}', [SuperheroeController::class, 'edit'])->name('superheroes.edit');
 
 
