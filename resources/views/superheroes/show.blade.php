@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mx-auto">
-    <h1 class="text-2xl font-bold mb-4">Detalle del Superhéroe</h1>
+    <h1 class="text-2xl font-bold m-10">Detalle del Superhéroe</h1>
 
     <div class="bg-white rounded-lg overflow-hidden shadow-md mb-4 p-4">
         <div class="p-4">

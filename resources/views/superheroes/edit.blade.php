@@ -1,31 +1,49 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mx-auto">
-    <h1 class="text-2xl font-bold mb-4">Editar Superhéroe</h1>
+<div class="container mx-auto flex justify-center">
+    <div class="max-w-lg">
+        <h1 class="text-2xl font-bold m-10">Editar Superhéroe</h1>
 
-    <form action="{{ route('superheroes.update', $superhero->id) }}" method="POST" class="max-w-sm">
-        @csrf
-        @method('PUT')
+        <form action="{{ route('superheroes.update', $superhero->id) }}" method="POST" class="max-w-lg">
+            @csrf
+            @method('PUT')
 
-        <div class="mb-4">
-            <label for="real_name" class="block text-gray-700 font-bold mb-2">Nombre Real:</label>
-            <input type="text" name="real_name" id="real_name" class="form-input" value="{{ $superhero->real_name }}">
-        </div>
+            <div class="mb-6">
+                <label for="real_name" class="block text-sm font-medium leading-6 text-slate-700">Nombre Real</label>
+                <input type="text" name="real_name" id="real_name" value="{{ $superhero->real_name }}" class="mt-1 h-7 outline-2 outline-cyan-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
+                invalid:border-pink-500 invalid:text-pink-600
+                focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+            </div>
 
-        <div class="mb-4">
-            <label for="superhero_name" class="block text-gray-700 font-bold mb-2">Nombre Superhéroe:</label>
-            <input type="text" name="superhero_name" id="superhero_name" class="form-input" value="{{ $superhero->superhero_name }}">
-        </div>
 
-        <div class="mb-4">
-            <label for="photo_url" class="block text-gray-700 font-bold mb-2">URL de la Foto:</label>
-            <input type="text" name="photo_url" id="photo_url" class="form-input" value="{{ $superhero->photo_url }}">
-        </div>
+            <div class="mb-6">
+                <label for="superhero_name" class="block text-sm font-medium leading-6 text-slate-700">Nombre Superhéroe</label>
+                <input type="text" name="superhero_name" id="superhero_name" value="{{ $superhero->superhero_name }}" class="mt-1 h-7 outline-2 outline-cyan-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
+                invalid:border-pink-500 invalid:text-pink-600
+                focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+            </div>
 
-        <div class="mb-4">
-            <label for="additional_info" class="block text-gray-700 font-bold mb-2">Información Adicional:</label>
-            <textarea name="additional_info" id="additional_info" class="form-textarea">{{ $superhero->additional_info }}</textarea>
-        </div>
+            <div class="mb-6">
+                <label for="photo_url" class="block text-sm font-medium leading-6 text-slate-700">URL de la Foto</label>
+                <input type="text" name="photo_url" id="photo_url" value="{{ $superhero->photo_url }}" class="mt-1 h-7 outline-2 outline-cyan-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
+                invalid:border-pink-500 invalid:text-pink-600
+                focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+            </div>
 
-        <button type="submit" class="bg-blue-500 hover:bg
+            <div class="mb-6">
+                <label for="additional_info" class="block text-sm font-medium leading-6 text-slate-700">Información Adicional</label>
+                <textarea name="additional_info" id="additional_info" rows="3" class="mt-1 outline-2 outline-cyan-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
+                invalid:border-pink-500 invalid:text-pink-600
+                focus:invalid:border-pink-500 focus:invalid:ring-pink-500">{{ $superhero->additional_info }}</textarea>
+            </div>
+
+            <div class="flex justify-end">
+                <button type="submit" class="inline-flex items-center px-4 py-2 bg-cyan-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-cyan-700 active:bg-cyan-900 focus:outline-none focus:border-cyan-700 focus:ring ring-indigo-300 disabled:opacity-25 transition ease-in-out duration-150">
+                    Guardar Cambios
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+@endsection

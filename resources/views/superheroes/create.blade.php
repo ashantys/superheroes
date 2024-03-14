@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mx-auto flex justify-center">
     <div class="max-w-lg">
-        <h1 class="text-2xl font-bold  mb-10">Agregar Nuevo Superhéroe</h1>
+        <h1 class="text-2xl font-bold  m-10">Agregar Nuevo Superhéroe</h1>
 
         <form action="{{ route('superheroes.store') }}" method="POST" class="max-w-lg">
             @csrf

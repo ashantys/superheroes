@@ -24,4 +24,6 @@ Route::get('/show/{id}', [SuperheroeController::class, 'show'])->name('superhero
 // Ruta para mostrar el formulario de edición de un superhéroe específico
 Route::get('/edit/{id}', [SuperheroeController::class, 'edit'])->name('superheroes.edit');
 
+// Ruta para actualizar un superhéroe específico
+Route::put('/update/{id}', [SuperheroeController::class, 'update'])->name('superheroes.update');
 

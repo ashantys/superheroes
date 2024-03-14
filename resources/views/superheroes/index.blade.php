@@ -32,7 +32,7 @@
                 <td class="border px-4 py-2">{{ $superhero->real_name }}</td>
                 <td class="border px-4 py-2">{{ $superhero->superhero_name }}</td>
                 <td class="border px-4 py-2">
-                    <a href="{{ route('superheroes.show', $superhero->id) }}" class="text-blue-500 hover:text-blue-700">Ver</a>
+                    <a href="{{ route('superheroes.show', $superhero->id) }}"  class="text-cyan-500 hover:text-cyan-700"><x-heroicon-o-eye class="w-6 h-6 mr-2 text-" />Ver</a>
                     <a href="{{ route('superheroes.edit', $superhero->id) }}" class="text-yellow-500 hover:text-yellow-700 ml-2">Editar</a>
                 </td>
             </tr>
