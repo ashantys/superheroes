@@ -10,7 +10,7 @@
 
             <div class="mb-6">
                 <label for="real_name" class="block text-sm font-medium leading-6 text-slate-700">Nombre Real</label>
-                <input type="text" name="real_name" id="real_name" class="mt-1 outline-2 outline-cyan-500 block w-full shadow-sm sm:text-sm rounded-md
+                <input type="text" name="real_name" id="real_name" class="mt-1 h-7 outline-2 outline-cyan-500 block w-full shadow-sm sm:text-sm rounded-md
                 invalid:border-pink-500 invalid:text-pink-600
                 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
             </div>
@@ -18,14 +18,14 @@
 
             <div class="mb-6">
                 <label for="superhero_name" class="block text-sm font-medium leading-6 text-slate-700">Nombre Superhéroe</label>
-                <input type="text" name="superhero_name" id="superhero_name" class="mt-1 outline-2 outline-cyan-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
+                <input type="text" name="superhero_name" id="superhero_name" class="mt-1 h-7 outline-2 outline-cyan-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
                 invalid:border-pink-500 invalid:text-pink-600
                 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
             </div>
 
             <div class="mb-6">
                 <label for="photo_url" class="block text-sm font-medium leading-6 text-slate-700">URL de la Foto</label>
-                <input type="text" name="photo_url" id="photo_url" class="mt-1 outline-2 outline-cyan-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
+                <input type="text" name="photo_url" id="photo_url" class="mt-1 h-7 outline-2 outline-cyan-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
                 invalid:border-pink-500 invalid:text-pink-600
                 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
             </div>
