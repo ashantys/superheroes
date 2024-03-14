@@ -12,13 +12,15 @@
     @endif
 
     <div class="flex justify-end items-center mb-4">
-        <a href="{{ route('superheroes.create') }}" class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Agregar Nuevo Superhéroe</a>
+        <a href="{{ route('superheroes.create') }}" class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded mb-4 inline-flex items-center">
+            <x-heroicon-o-plus class="w-6 h-6 mr-2 text-white" /> Agregar Nuevo Superhéroe
+        </a>
     </div>
+    
 
     <table class="table-auto w-full">
         <thead>
             <tr>
-                <th class="px-4 py-2">ID</th>
                 <th class="px-4 py-2">Nombre Real</th>
                 <th class="px-4 py-2">Nombre Superhéroe</th>
                 <th class="px-4 py-2">Acciones</th>
@@ -27,7 +29,6 @@
         <tbody>
             @foreach ($superheroes as $superhero)
             <tr>
-                <td class="border px-4 py-2">{{ $superhero->id }}</td>
                 <td class="border px-4 py-2">{{ $superhero->real_name }}</td>
                 <td class="border px-4 py-2">{{ $superhero->superhero_name }}</td>
                 <td class="border px-4 py-2">

@@ -12,5 +12,7 @@ Route::resource('superheroes', 'SuperheroeController');
 
 Route::get('/index', [SuperheroeController::class, 'index'])->name('superheroes.index');
 
+Route::get('/create', [SuperheroeController::class, 'create'])->name('superheroes.create');
+
 
 
